@@ -23,6 +23,7 @@ repositories { flatDir { dirs 'libs' } }
 
 dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
     // 任务的切换调度使用库
     implementation 'com.parse.bolts:bolts-tasks:1.4.0'
     implementation 'com.parse.bolts:bolts-applinks:1.4.0'
