@@ -41,8 +41,8 @@ apply plugin: 'com.jfrog.bintray'
 def siteUrl = 'https://github.com/firejunking/PayHelper' // 项目主页。
 def gitUrl = 'https://github.com/firejunking/PayHelper.git' // Git仓库的url。
 
-group = "com.firejun.payhelper"
-version = "1.0.0"
+group = "com.firejun"
+version = "1.0.1"
 
 install {
     repositories.mavenInstaller {
@@ -102,10 +102,19 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
 }
 artifacts {
-    archives javadocJar
+//    archives javadocJar
     archives sourcesJar
 }
-
+javadoc {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        author true
+        version true
+        links "http://docs.oracle.com/javase/7/docs/api"
+        title 'PayHelper for Android'   // 文档标题
+    }
+}
 // 这里是读取Bintray相关的信息，我们上传项目到github上的时候会把gradle文件传上去，所以不要把帐号密码的信息直接写在这里，写在local.properties中，这里动态读取。
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
@@ -115,9 +124,9 @@ bintray {
 
     configurations = ['archives']
     pkg {
-        repo = "maven"  //Repository名字 需要自己在bintray网站上先添加
+        repo = "payhelper"  //Repository名字 需要自己在bintray网站上先添加
         name = "payhelper"// 发布到Bintray上的项目名字，这里的名字不是compile 'com.ansen.library:circleimage:1.0.1'中的circleimage。
-        userOrg = 'Fire'//Bintray的组织id
+        userOrg = 'firejun'//Bintray的组织id
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
