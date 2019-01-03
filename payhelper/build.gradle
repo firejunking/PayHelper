@@ -42,7 +42,7 @@ def siteUrl = 'https://github.com/firejunking/PayHelper' // 项目主页。
 def gitUrl = 'https://github.com/firejunking/PayHelper.git' // Git仓库的url。
 
 group = "com.firejun"
-version = "1.0.1"
+version = "1.0.0"
 
 install {
     repositories.mavenInstaller {
