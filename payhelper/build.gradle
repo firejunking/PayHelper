@@ -65,7 +65,7 @@ install {
                 //填写开发者基本信息，复制我的，这里需要修改。
                 developers {
                     developer {
-                        id 'firejun' // 开发者的id。
+                        id 'guojunfire' // 开发者的id。
                         name 'guojunfire' // 开发者名字。
                         email 'fire435559203@gmail.com' // 开发者邮箱。
                     }
@@ -126,10 +126,14 @@ bintray {
     pkg {
         repo = "payhelper"  //Repository名字 需要自己在bintray网站上先添加
         name = "payhelper"// 发布到Bintray上的项目名字，这里的名字不是compile 'com.ansen.library:circleimage:1.0.1'中的circleimage。
-        userOrg = 'firejun'//Bintray的组织id
+        userOrg = 'guojunfire'//Bintray的组织id
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true // 是否是公开项目。
     }
 }
+
+// 上传命令
+// gradle install
+// gradle clean build bintrayUpload
