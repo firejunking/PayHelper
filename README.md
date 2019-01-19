@@ -1,5 +1,7 @@
 # PayHelper
 
+[ ![Download](https://api.bintray.com/packages/guojunfire/payhelper/payhelper/images/download.svg) ](https://bintray.com/guojunfire/payhelper/payhelper/_latestVersion)
+
 ### 简介
 集成支付宝支付、微信支付，对支付更好地二次封装，有利于模块化等工作
 
