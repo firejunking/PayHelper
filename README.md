@@ -6,7 +6,7 @@
 ### 依赖使用
 ```
 dependencies {
-  implementation 'com.firejun:payhelper:1.0.0'
+  implementation 'com.firejun:payhelper:1.0.1'
 }
 ```
 ### 使用案例
